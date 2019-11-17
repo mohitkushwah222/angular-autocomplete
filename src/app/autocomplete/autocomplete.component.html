@@ -1,0 +1,10 @@
+<input class="form-control" type="text" placeholder="Type to search" #input (keyup)="filter($event, input.value)"
+  (keypress)="selectOnEnter($event)" (click)="filter($event, input.value? input.value : null)" autocomplete="off">
+<div class="dropdown" *ngIf="isDropdown">
+  <div class="dropdown-row" *ngFor="let item of selectedListItem;let i = index" (click)="selectItem(item)"
+    (mouseover)="onHover($event, i)" (mouseleave)="onHover($event, i)" [class.selectedItem]="selectedItem[i]"
+    id="{{i}}">
+    {{item.value}}
+  </div>
+  <div class="dropdown-row" *ngIf="selectedListItem.length === 0">No results found</div>
+</div>

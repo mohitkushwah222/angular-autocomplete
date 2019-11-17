@@ -7,4 +7,32 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-autocomplete';
+  list = [
+    {
+      key: 'india',
+      value: 'India'
+    },
+    {
+      key: 'united states',
+      value: 'United States'
+    },
+    {
+      key: 'britain',
+      value: 'Britain'
+    },
+    {
+      key: 'nepal',
+      value: 'Nepal'
+    },
+    {
+      key: 'australia',
+      value: 'Australia'
+    },
+  ];
+  constructor() {
+  }
+
+  select(e) {
+    console.log(e);
+  }
 }

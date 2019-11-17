@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+//modal
+@import './assets/style/reset.scss';
+@import './assets/style/color-variables.scss';
+
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
